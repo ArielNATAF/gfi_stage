@@ -1,0 +1,209 @@
+\documentclass[12pt,a4paper,twoside,titlepage]{article}
+\usepackage{geometry}
+\usepackage[]{microtype}
+\usepackage[french,english]{babel}
+\usepackage{enumitem}
+\usepackage{setspace}
+	\singlespacing
+\usepackage[backend=biber]{biblatex}
+\addbibresource{biblio.bib}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{listings}
+% \usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{pgfkeys}
+\usepackage{array}
+\usepackage{minted}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\definecolor{RougeNanterre}{RGB}{227,0,27}
+\usepackage[format=plain,
+            font=it]{caption}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={RougeNanterre}
+}
+\usepackage{fontspec}
+  \setmainfont[Ligatures=TeX]{Noto Sans}
+  \setsansfont[Ligatures=TeX]{Inconsolata}
+  \setmonofont{Fira Mono}
+% Define a new fontfamily for the subsubsection font
+% Don't use \fontspec directly to change the font
+\newfontfamily\subsubsectionfont[Color=RougeNanterre]{Times New Roman}
+% Set formats for each heading level
+\titleformat*{\section}{\Large\bfseries\sffamily\color{RougeNanterre}}
+\titleformat*{\subsection}{\large\bfseries\sffamily\color{RougeNanterre}}
+\titleformat*{\subsubsection}{\itshape\sffamily\color{RougeNanterre}}
+
+\usepackage{csquotes}
+
+\geometry{
+    paper=a4paper,
+    inner=3cm,
+    outer=2.5cm,
+    top=2.5cm,
+    bottom=3.5cm
+}
+
+\usepackage{fancyhdr}
+\fancyhead[RO,LE]{Ariel Nataf}
+  \setlength{\headheight}{26pt}
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{red}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{0.5pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{RougeNanterre}\leaders\hrule height \footrulewidth\hfill}}
+\pagestyle{fancy}
+
+\lstset{ %
+  frame=none,
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+%  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=4,                       % sets default tabsize to 2 spaces
+  aboveskip=3mm,
+  belowskip=3mm,
+}
+
+\makeatletter
+\newcommand\subTrois{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {2.25ex \@plus .25ex}%
+            {\sffamily\normalsize\itshape\color{RougeNanterre}}}
+\newcommand\subQuatre{\@startsection{subparagraph}{5}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {2.25ex \@plus .25ex}%
+            {\sffamily\normalsize\itshape\color{RougeNanterre}}}
+\newcommand\subCinq{\@startsection{subparagraph}{6}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {2.25ex \@plus .25ex}%
+            {\sffamily\normalsize\itshape\color{RougeNanterre}}}        
+\makeatother
+
+\newcommand{\coverpage}[1]{%
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Rapport de stage de fin d'année}\\[0.3cm] % Name of your university/college
+\textsc{\LARGE 1ère année de Master  }\\[0.3cm]
+\textsc{\Large \color{RougeNanterre} Université Paris Nanterre }\\[0.3cm]
+\textsc{\LARGE  à \color{RougeNanterre} GFI Informatique}\\[0.5cm] % Major heading such as course name
+ % Minor heading such as course title
+
+%--------------------------------------------------------------------------------
+%	TITLE SECTION
+%--------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{\sffamily \huge \bfseries Étude de caméras}\\[0.2cm]
+{\sffamily \huge \bfseries et d'algorithmes de tracking}\\[0.1cm]
+{\sffamily \huge \bfseries pour la Computer Vision sur OpenCV}\\[0.3cm]
+% Title of your document
+\HRule \\[1.5cm]
+
+\vspace*{\fill}
+
+%--------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%--------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+Étudiant~:\\
+\color{RougeNanterre}Ariel NATAF% Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+Maître de stage~:\\
+\color{RougeNanterre}Jean-Paul MULLER% Supervisor's Name
+\end{flushright}
+\end{minipage}\\[1cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%--------------------------------------------------------------------------------
+%	LOGO SECTION
+%--------------------------------------------------------------------------------
+
+\includegraphics{img/Logo_GFI_2011.jpg}\\[1cm]
+\includegraphics{img/logo_Nanterre.jpg}\\[1cm]% Include a department/university logo - this will require the graphicx package
+
+%--------------------------------------------------------------------------------
+%	DATE SECTION
+%--------------------------------------------------------------------------------
+
+{\large avril-juillet \color{RougeNanterre}2018}\\[1cm] % Date, change the \today to a set date if you want to be precise
+ 
+%--------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+\end{titlepage}
+}
+
+% Custom arguments for /fig command
+\pgfkeys{
+ /fig/.is family, /fig,
+ default/.style = 
+  {scale = 1,
+   angle = 0},
+ scale/.estore in = \figScale,
+ angle/.estore in = \figAngle
+}
+\newcommand{\fig}[2][]{%
+	\pgfkeys{/fig, default, #1}%
+	\begin{figure}[H]%
+    \centering
+    \includegraphics[angle=\figAngle,width=\figScale\textwidth]{#2}%
+	\end{figure}%
+}
+
+\newcommand{\filename}[1]{%
+	\texttt{#1}%
+}
+
+\newcommand{\vhdl}[1]{%
+  \lstinputlisting[language=vhdl]{#1}
+}
+
+\newcommand*\paths[1]{\lstset{inputpath=#1}\graphicspath{#1}}
+

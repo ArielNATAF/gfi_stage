@@ -1,0 +1,26 @@
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{3166FF} 
+{\color[HTML]{FFFFFF} \textbf{Nom}}          & {\color[HTML]{FFFFFF} \textbf{Vitesse}}                         & {\color[HTML]{FFFFFF} \textbf{Adapte taille}}               & {\color[HTML]{FFFFFF} \textbf{\begin{tabular}[c]{@{}c@{}}repère\\ quand perdu\end{tabular}}} & {\color[HTML]{FFFFFF} \textbf{Fluidité}} & {\color[HTML]{FFFFFF} \textbf{Précision}} \\ \hline
+\rowcolor[HTML]{F8A102} 
+\cellcolor[HTML]{DAE8FC}\textbf{Boosting}    & {\color[HTML]{333333} \textbf{lent --}}                         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}}                                  & \textbf{--}                              & \textbf{--}                               \\ \hline
+\rowcolor[HTML]{FFFE65} 
+\cellcolor[HTML]{DAE8FC}\textbf{MIL}         & {\color[HTML]{333333} \textbf{len -}}                           & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}}                                  & \textbf{-}                               & \textbf{-}                                \\ \hline
+\cellcolor[HTML]{DAE8FC}\textbf{KCF}         & \cellcolor[HTML]{FFFE65}\textbf{lent -}                         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}} & \cellcolor[HTML]{32CB00}\textbf{oui}                                                         & \cellcolor[HTML]{32CB00}\textbf{+}       & \cellcolor[HTML]{FFFE65}\textbf{-}        \\ \hline
+\rowcolor[HTML]{FE0000} 
+\cellcolor[HTML]{DAE8FC}\textbf{TLD}         & {\color[HTML]{FFFFFF} \textbf{lent ---}}                        & \cellcolor[HTML]{32CB00}\textbf{oui}                        & {\color[HTML]{FFFFFF} \textbf{non}}                                                          & {\color[HTML]{FFFFFF} \textbf{---}}      & {\color[HTML]{FFFFFF} \textbf{---}}       \\ \hline
+\rowcolor[HTML]{32CB00} 
+\cellcolor[HTML]{DAE8FC}\textbf{Median Flow} & \cellcolor[HTML]{FFFE65}\textbf{lent -}                         & \textbf{oui}                                                & \textbf{oui}                                                                                 & \textbf{+}                               & \textbf{+}                                \\ \hline
+\cellcolor[HTML]{DAE8FC}\textbf{Goturn}      & \cellcolor[HTML]{F8A102}{\color[HTML]{333333} \textbf{lent --}} & \cellcolor[HTML]{32CB00}\textbf{oui}                        & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}}                                  & \cellcolor[HTML]{FFFE65}\textbf{-}       & \cellcolor[HTML]{F8A102}\textbf{--}       \\ \hline
+\rowcolor[HTML]{32CB00} 
+\cellcolor[HTML]{DAE8FC}\textbf{MOSSE}       & \cellcolor[HTML]{FFFE65}\textbf{lent -}                         & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}} & \textbf{oui}                                                                                 & \textbf{+}                               & \textbf{+}                                \\ \hline
+\cellcolor[HTML]{DAE8FC}\textbf{CSRT}        & \cellcolor[HTML]{F8A102}\textbf{lent --}                        & \cellcolor[HTML]{32CB00}{\color[HTML]{333333} \textbf{oui}} & \cellcolor[HTML]{FE0000}{\color[HTML]{FFFFFF} \textbf{non}}                                  & \cellcolor[HTML]{32CB00}\textbf{+}       & \cellcolor[HTML]{FFFE65}\textbf{-}        \\ \hline
+\end{tabular}
+\caption{benchmark de différents algorithmes de tracking}
+\end{table}
+
