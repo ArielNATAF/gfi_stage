@@ -4,7 +4,7 @@ Pour le stage en Master 1 MIAGE à Paris Nanterre en 2018.
 
 # LaTex Engine
 
-LuLaTex utilisé
+LuaLaTex utilisé
 
 # Note
 
